@@ -12,61 +12,87 @@
     nav {
       position: fixed; top: 0; width: 100%; display: flex; 
       justify-content: space-between; align-items: center;
-      padding: 15px 50px; background: rgba(0,0,0,0.7); z-index: 1000;
+      padding: 12px 20px; background: rgba(0,0,0,0.85); z-index: 1000;
+      flex-wrap: wrap;
     }
-    nav h1 {color: gold; font-size: 22px;}
-    nav ul {list-style: none; display: flex;}
-    nav ul li {margin: 0 15px;}
-    nav ul li a {color: white; text-decoration: none; font-weight: bold;}
+    nav h1 {color: gold; font-size: 18px;}
+    nav ul {list-style: none; display: flex; flex-direction: column; width: 100%; margin-top: 10px;}
+    nav ul li {margin: 5px 0; text-align: center;}
+    nav ul li a {color: white; text-decoration: none; font-weight: bold; font-size: 14px;}
     nav ul li a:hover {color: gold;}
 
     /* Hero Section */
     header {
-      height: 100vh; background: url('hero2.jpg') no-repeat center/cover;
+      height: 100vh; background: url('https://images.unsplash.com/photo-1606112219348-204d7d8b94ee') no-repeat center/cover;
       display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+      padding: 0 15px;
     }
-    header h2 {font-size: 50px; color: gold; animation: glow 2s infinite alternate;}
-    header p {font-size: 20px; margin-top: 10px;}
-    header a {margin-top: 20px; padding: 10px 20px; background: gold; color: black; text-decoration: none; border-radius: 5px; font-weight: bold;}
+    header h2 {font-size: 28px; color: gold; animation: glow 2s infinite alternate;}
+    header p {font-size: 14px; margin-top: 8px;}
+    header a {margin-top: 15px; padding: 10px 18px; background: gold; color: black; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px;}
     header a:hover {background: white;}
 
     @keyframes glow {
-      from {text-shadow: 0 0 10px gold;}
-      to {text-shadow: 0 0 25px orange;}
+      from {text-shadow: 0 0 8px gold;}
+      to {text-shadow: 0 0 20px orange;}
     }
 
-    section {padding: 80px 50px; min-height: 100vh;}
+    section {padding: 60px 20px; min-height: 100vh;}
 
     /* About */
     #about {background: #1f2833;}
-    #about h2 {color: gold; margin-bottom: 20px;}
-    #about p {line-height: 1.6;}
+    #about h2 {color: gold; margin-bottom: 15px; font-size: 22px;}
+    #about p {line-height: 1.5; font-size: 14px;}
 
     /* YouTube */
     #youtube {background: #0b0c10; text-align: center;}
-    #youtube h2 {color: gold; margin-bottom: 20px;}
-    iframe {width: 80%; height: 400px; border-radius: 10px;}
+    #youtube h2 {color: gold; margin-bottom: 15px; font-size: 22px;}
+    iframe {width: 100%; height: 220px; border-radius: 10px; max-width: 600px;}
 
     /* Tournament */
     #tournament {background: #1f2833; text-align: center;}
-    #tournament h2 {color: gold; margin-bottom: 20px;}
-    .winner {margin-top: 20px;}
-    .winner img {width: 300px; border-radius: 10px; border: 3px solid gold;}
-    .winner h3 {margin-top: 10px; color: white;}
+    #tournament h2 {color: gold; margin-bottom: 15px; font-size: 22px;}
+    #tournament p {font-size: 14px;}
+    .winner {margin-top: 15px;}
+    .winner img {width: 100%; max-width: 320px; border-radius: 10px; border: 3px solid gold;}
+    .winner h3 {margin-top: 8px; font-size: 16px; color: white;}
 
     /* Register */
     #register {background: #0b0c10; text-align: center;}
-    #register h2 {color: gold; margin-bottom: 20px;}
-    #register a {padding: 12px 25px; background: gold; color: black; text-decoration: none; font-weight: bold; border-radius: 8px;}
+    #register h2 {color: gold; margin-bottom: 15px; font-size: 22px;}
+    #register a {padding: 12px 20px; background: gold; color: black; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 14px;}
     #register a:hover {background: white;}
 
     /* Footer */
-    footer {background: black; text-align: center; padding: 20px;}
-    footer p {color: gray;}
+    footer {background: black; text-align: center; padding: 15px;}
+    footer p {color: gray; font-size: 12px;}
     
     /* Scroll Animation */
     .reveal {opacity: 0; transform: translateY(50px); transition: all 1s ease;}
     .reveal.active {opacity: 1; transform: translateY(0);}
+
+    /* ------------ Responsive (Tablet + Desktop) ------------ */
+    @media(min-width: 768px) {
+      nav h1 {font-size: 22px;}
+      nav ul {flex-direction: row; width: auto; margin-top: 0;}
+      nav ul li {margin: 0 15px;}
+      nav ul li a {font-size: 16px;}
+
+      header h2 {font-size: 40px;}
+      header p {font-size: 18px;}
+      header a {font-size: 16px;}
+
+      #about h2, #youtube h2, #tournament h2, #register h2 {font-size: 28px;}
+      #about p, #tournament p {font-size: 16px;}
+      iframe {height: 400px;}
+      .winner h3 {font-size: 18px;}
+    }
+
+    @media(min-width: 1024px) {
+      header h2 {font-size: 50px;}
+      header p {font-size: 20px;}
+      nav {padding: 15px 50px;}
+    }
   </style>
 </head>
 <body>
@@ -99,7 +125,7 @@
   <!-- YouTube Section -->
   <section id="youtube" class="reveal">
     <h2>Watch Our Matches</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/xeGQr5TFGZ8?si=u555_C6rTqVGok8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
   </section>
 
   <!-- Tournament Section -->
@@ -115,8 +141,7 @@
   <!-- Register Section -->
   <section id="register" class="reveal">
     <h2>Register for Next Tournament</h2>
-    <!--<a href="https://forms.gle/your-google-form-link" target="_blank">Fill Google Form</a>-->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTiFUxI_MU1eJ79mEHnyl0ZqFwL1LpLDBnkFOnR8u_yExK8g/viewform?embedded=true" width="640" height="1352" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <a href="https://forms.gle/your-google-form-link" target="_blank">Fill Google Form</a>
   </section>
 
   <!-- Footer -->
@@ -142,7 +167,3 @@
   </script>
 </body>
 </html>
-
-
-
-
