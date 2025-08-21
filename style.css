@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: gold;
+  text-align: center;
+}
+
+header {
+  padding: 40px 20px;
+  background: url('https://i.ibb.co/9T5hLhG/bgmi.jpg') no-repeat center/cover;
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px gold; }
+  to { text-shadow: 0 0 30px orange; }
+}
+
+.tagline {
+  font-size: 1.2rem;
+}
+
+.intro {
+  padding: 50px 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: orange;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #111;
+  font-size: 0.9rem;
+}
