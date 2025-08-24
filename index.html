@@ -4,108 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UP81 Battleground Club</title>
-  <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;}
-    body {background: #0b0c10; color: white; scroll-behavior: smooth;}
-
-    /* Navbar */
-    nav {
-      position: fixed; top: 0; width: 100%; display: flex; 
-      justify-content: space-between; align-items: center;
-      padding: 12px 20px; background: rgba(0,0,0,0.85); z-index: 1000;
-      flex-wrap: wrap;
-    }
-    nav h1 {color: gold; font-size: 18px;}
-    nav ul {list-style: none; display: flex; flex-direction: column; width: 100%; margin-top: 10px;}
-    nav ul li {margin: 5px 0; text-align: center;}
-    nav ul li a {color: white; text-decoration: none; font-weight: bold; font-size: 14px;}
-    nav ul li a:hover {color: gold;}
-
-    /* Hero Section */
-    header {
-      height: 100vh; background: url('hero2.jpg') no-repeat center/cover;
-      display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-      padding: 0 15px;
-    }
-    header h2 {font-size: 28px; color: gold; animation: glow 2s infinite alternate;}
-    header p {font-size: 14px; margin-top: 8px;}
-    header a {margin-top: 15px; padding: 10px 18px; background: gold; color: black; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px;}
-    header a:hover {background: white;}
-
-    @keyframes glow {
-      from {text-shadow: 0 0 8px gold;}
-      to {text-shadow: 0 0 20px orange;}
-    }
-
-    section {padding: 60px 20px; min-height: 100vh;}
-
-    /* About */
-    #about {background: #1f2833;}
-    #about h2 {color: gold; margin-bottom: 15px; font-size: 22px;}
-    #about p {line-height: 1.5; font-size: 14px;}
-
-    /* YouTube */
-    #youtube {background: #0b0c10; text-align: center;}
-    #youtube h2 {color: gold; margin-bottom: 15px; font-size: 22px;}
-    iframe {width: 100%; height: 220px; border-radius: 10px; max-width: 600px;}
-
-    /* Tournament */
-    #tournament {background: #1f2833; text-align: center;}
-    #tournament h2 {color: gold; margin-bottom: 15px; font-size: 22px;}
-    #tournament p {font-size: 14px;}
-    .winner {margin-top: 15px;}
-    .winner img {width: 100%; max-width: 320px; border-radius: 10px; border: 3px solid gold;}
-    .winner h3 {margin-top: 8px; font-size: 16px; color: white;}
-
-    /* Register */
-    #register {min-height: 100vh;}
-    #register {background: #0b0c10; text-align: center;}
-    #register h2 {color: gold; margin-bottom: 15px; font-size: 22px;}
-    #register a {padding: 12px 20px; background: gold; color: black; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 14px;}
-    #register a:hover {background: white;}
-
-    /* Footer */
-    footer {background: black; text-align: center; padding: 15px;}
-    footer p {color: gray; font-size: 12px;}
-    
-    /* Scroll Animation */
-    .reveal {opacity: 0; transform: translateY(50px); transition: all 1s ease;}
-    .reveal.active {opacity: 1; transform: translateY(0);}
-
-    /* ------------ Responsive (Tablet + Desktop) ------------ */
-    @media(min-width: 768px) {
-      nav h1 {font-size: 22px;}
-      nav ul {flex-direction: row; width: auto; margin-top: 0;}
-      nav ul li {margin: 0 15px;}
-      nav ul li a {font-size: 16px;}
-
-      header h2 {font-size: 40px;}
-      header p {font-size: 18px;}
-      header a {font-size: 16px;}
-
-      #about h2, #youtube h2, #tournament h2, #register h2 {font-size: 28px;}
-      #about p, #tournament p {font-size: 16px;}
-      iframe {height: 400px;}
-      .winner h3 {font-size: 18px;}
-    }
-
-    @media(min-width: 1024px) {
-      header h2 {font-size: 50px;}
-      header p {font-size: 20px;}
-      nav {padding: 15px 50px;}
-    }
-  </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav>
-    <h1>UP81 BGL CLUB</h1>
-    <ul>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="UP81BATTLEGROUNDCLUB Logo">
+    </div>
+    <button class="burger" id="burger">&#9776;</button>
+    <ul class="nav-links" id="menu">
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#tournaments">Tournament</a></li>
       <li><a href="#youtube">YouTube</a></li>
-      <li><a href="#tournament">Tournament</a></li>
       <li><a href="#register">Register</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -116,61 +31,132 @@
     <a href="#register">Join Tournament</a>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="reveal">
+<!-- About Section -->
+<section id="about" class="reveal">
+  <div class="about-container">
     <h2>About Our Club</h2>
-    <p>UP81 Battleground Club is a community of passionate gamers who love Battlegrounds Mobile India. 
-    We organize free and paid tournaments, highlight winners, and promote competitive gaming.</p>
-  </section>
+    <div class="underline"></div>
+    <p>
+      <span class="highlight">UP81 Battleground Club</span> is a community of passionate gamers who love 
+      <span class="highlight">Battlegrounds Mobile India</span>. <br><br>
+      We organize <span class="highlight">free & paid tournaments</span>, 
+      highlight winners, and promote <span class="highlight">competitive gaming</span>.
+    </p>
+  </div>
+</section>
 
   <!-- YouTube Section -->
-  <section id="youtube" class="reveal">
-    <h2>Watch Our Matches</h2>
-    <iframe width="560" height="800" src="https://www.youtube.com/embed/xeGQr5TFGZ8?si=IcF4LSS_kmEGGUAM&amp;start=1408" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </section>
 
-  <!-- Tournament Section -->
-  <section id="tournament" class="reveal">
-    <h2>Our Tournaments</h2>
-    <p>We successfully hosted our first tournament. Congratulations to the winning team!</p>
-    <div class="winner">
-      <img src="https://via.placeholder.com/300x200.png?text=Winner+Team" alt="Winner Team">
-      <h3>🏆 Team Goblin - First Tournament Winners</h3>
+    <section id="youtube" class="reveal">
+      <div class="youtube-container">
+        <h2>Watch Our Matches</h2>
+        <div class="underline"></div>
+        <iframe width="560" height="800" src="https://www.youtube.com/embed/xeGQr5TFGZ8?si=IcF4LSS_kmEGGUAM&amp;start=1408" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+
+
+<!-- Tournament Section -->
+<section id="tournaments" class="reveal">
+  <div class="tournament-container">
+    <h2>🏆 Our Tournaments</h2>
+    <div class="underline"></div>
+    <p class="intro">
+      We successfully hosted exciting tournaments. Here are the results:
+    </p>
+
+    <div class="tournament-grid">
+      <!-- Card 1 -->
+      <div class="winner-card">
+        <h3>🥇 Winner</h3>
+        <p><span class="highlight">Team Goblin</span></p>
+        <p class="desc">First BGMI Tournament - Champion</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="winner-card">
+        <h3>🥈 Runner Up</h3>
+        <p><span class="highlight">Team Phantom</span></p>
+        <p class="desc">Showed great fight till the end</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="winner-card">
+        <h3>🔥 MVP Player</h3>
+        <p><span class="highlight">Player X</span></p>
+        <p class="desc">Most kills of the tournament</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Register Section -->
-  <section id="register" class="reveal">
-    <h2>Register for Next Tournament</h2>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTiFUxI_MU1eJ79mEHnyl0ZqFwL1LpLDBnkFOnR8u_yExK8g/viewform?usp=header">Fill Google Form</a>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTiFUxI_MU1eJ79mEHnyl0ZqFwL1LpLDBnkFOnR8u_yExK8g/viewform?embedded=true" width="640" height="1352" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </section>
+
+<!-- Registration Section -->
+<section id="register" class="registration-section">
+  <h2>📝 Register for Next Tournament</h2>
+  <p>Fill the form below to participate in our next BGMI Tournament.</p>
+
+  <div class="form-container">
+    <!-- Yaha apna Google Form link paste karo -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTiFUxI_MU1eJ79mEHnyl0ZqFwL1LpLDBnkFOnR8u_yExK8g/viewform?embedded=true" 
+      width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
+</section>
+
+    <!-- Tournament Section -->
+    <section class="tournament-section">
+      <h2>Next Tournament</h2>
+      <div class="tag upcoming">UPCOMING</div>
+      <div class="tag soon">Coming Soon</div>
+  
+      <p>🔥 BGMI Paid Entry Tournament</p>
+      <p>Start Date: <strong>12 September 2025, 6:00 PM</strong></p>
+  
+      <div id="countdown">Loading countdown...</div>
+    </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2>📞 Contact Us</h2>
+  <p>Stay connected with <span class="highlight">UP81 Battleground Club</span></p>
+
+  <div class="contact-container">
+
+    <div class="contact-item">
+      <h3>📍 Address</h3>
+      <p>Etawah, Uttar Pradesh, India</p>
+    </div>
+
+    <div class="contact-item">
+      <h3>📸 Instagram</h3>
+      <a href="https://instagram.com/up81battlegroundclub" target="_blank">@up81battlegroundclub</a>
+    </div>
+
+    <div class="contact-item">
+      <h3>▶️ YouTube</h3>
+      <a href="https://youtube.com/@up81battlegroundclub" target="_blank">UP81 Battleground Club</a>
+    </div>
+
+    <div class="contact-item">
+      <h3>💬 WhatsApp Group</h3>
+      <a href="https://chat.whatsapp.com/HeHhQ7AzfMb740PLgR28qw" target="_blank">Join Now</a>
+    </div>
+
+    <div class="contact-item">
+      <h3>📧 Email</h3>
+      <a href="mailto:up81battlegroundclub@gmail.com">up81battlegroundclub@gmail.com</a>
+    </div>
+
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 UP81 Battleground Club | All Rights Reserved</p>
   </footer>
 
-  <script>
-    // Scroll Animation
-    function reveal() {
-      let reveals = document.querySelectorAll(".reveal");
-      for (let i = 0; i < reveals.length; i++) {
-        let windowHeight = window.innerHeight;
-        let elementTop = reveals[i].getBoundingClientRect().top;
-        let elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        }
-      }
-    }
-    window.addEventListener("scroll", reveal);
-    reveal();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
