@@ -373,41 +373,7 @@ section {
 }
 
 
-/* ========== Register Section ========== 
-#register {
-  background: #111;
-  text-align: center;
-}
-
-#register h2 {
-  margin-bottom: 15px;
-  font-size: 22px;
-}
-
-#register a {
-  padding: 12px 20px;
-  background: gold;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  font-size: 14px;
-}
-
-#register a:hover {
-  background: white;
-}
-
-#register iframe {
-  width: 90%;
-  max-width: 600px;
-  height: 500px;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0 0 20px rgba(0,0,0,0.7);
-}
-*/
-
+/* ========== Register Section ========== */
 .registration-section {
   padding: 60px 20px;
   background: linear-gradient(135deg, #111, #222);
@@ -434,6 +400,21 @@ section {
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+form-container a {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+form-container a:hover {
+  background: white;
 }
 
 .form-container iframe {
@@ -596,3 +577,4 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
+
