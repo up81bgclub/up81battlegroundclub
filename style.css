@@ -402,7 +402,7 @@ section {
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
-form-container a {
+.form-btn{
   margin-top: 15px;
   padding: 10px 18px;
   background: gold;
@@ -413,7 +413,7 @@ form-container a {
   font-size: 20px;
 }
 
-form-container a:hover {
+.form-btn:hover {
   background: white;
 }
 
@@ -577,4 +577,5 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
+
 
